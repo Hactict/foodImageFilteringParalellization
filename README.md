@@ -17,10 +17,17 @@ pip install numpy pillow pandas matplotlib
 # Install scipy 
 pip install scipy
 
-Upload download file from github
+# Install Unzip
+sudo apt install unzip -y
+
+#Upload Zip file
+Upload download zip file from github
+
+#Unzip file
+unzip foodImageFilteringParalellization-main.zip
 
 # 1. Test quick mode first
-python run_complete_benchmark.py -- quick
+python run_complete_benchmark_3way.py  -- quick 
 
 # 2. Check outputs are generated
 ls food_images/output_multiprocessing/
@@ -31,7 +38,7 @@ ls food_images/output_concurrent/
 ls performance_charts/
 
 # 4. Run full benchmark
-python run_complete_benchmark.py
+python run_complete_benchmark_3way.py  
 
 # 5. Review performance summary
 cat performance_charts/performance_summary.txt
@@ -44,6 +51,7 @@ sudo apt install zip
 zip -r charts_results.zip ~/performance_charts
 
 Kalau gambar
+
 zip -r image_results.zip ~/food_images
 
 
@@ -55,4 +63,3 @@ In your SSH browser window, look at the top right corner and click the Download 
 In the File path field, type: charts_results.zip
 
 Click Download. The file will appear in your local PC's Downloads folder.
-
